@@ -1,0 +1,5 @@
+name: DDGVanish
+version: ${project.version}
+main: nl.datalion.ddgvanish.DDGVanish
+authors: [DataLion]
+description: Poof be gone
