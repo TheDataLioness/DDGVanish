@@ -3,3 +3,16 @@ version: ${project.version}
 main: nl.datalion.ddgvanish.DDGVanish
 authors: [DataLion]
 description: Poof be gone
+
+commands:
+  vanish:
+    description: Vanish away... poof!
+    permission: ddgvanish.command.vanish
+
+permissions:
+  ddgvanish.command.vanish:
+    description: vanish command permission
+    default: op
+  ddgvanish.bypass:
+    description: Permission to see Players in vanish
+    default: op
