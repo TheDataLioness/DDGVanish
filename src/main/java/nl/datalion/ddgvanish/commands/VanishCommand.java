@@ -24,14 +24,10 @@ public class VanishCommand implements CommandExecutor {
         if(!vanishUtil.isVanished(player)){
             vanishUtil.setVanished(player);
             player.sendMessage(DDGVanish.getPrefix() + DDGVanish.color("&aPoof! You are Vanished"));
-            return true;
-        }
-
-        // Unvanish Player
-        if(vanishUtil.isVanished(player)){
+        } else {
+            // Unvanish Player
             vanishUtil.unsetVanished(player);
             player.sendMessage(DDGVanish.getPrefix() + DDGVanish.color("&aPoof! You are Unvanished"));
-            return true;
         }
 
         return false;

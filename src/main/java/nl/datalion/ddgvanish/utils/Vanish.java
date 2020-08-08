@@ -48,7 +48,6 @@ public class Vanish {
         for (Player onlinePlayer: onlinePlayers){
             // Don't hide player if player has bypass permission
             if(onlinePlayer.hasPermission("ddgvanish.bypass")) continue;
-
             onlinePlayer.hidePlayer(DDGVanish.getInstance(), player);
         }
     }

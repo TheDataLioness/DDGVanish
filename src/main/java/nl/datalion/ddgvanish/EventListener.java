@@ -9,7 +9,6 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import java.util.Collection;
 
 public class EventListener implements Listener {
-
     @EventHandler
     public void onJoin(PlayerJoinEvent e){
         // Define variables Im using multiple times
@@ -27,9 +26,7 @@ public class EventListener implements Listener {
         if(player.hasPermission("ddgvanish.bypass")) return;
 
         for (Player onlinePlayer: onlinePlayers){
-            if(vanishUtil.isVanished(onlinePlayer)) vanishUtil.setVanished(player);
+            if(vanishUtil.isVanished(onlinePlayer)) onlinePlayer.hidePlayer(DDGVanish.getInstance(), player);
         }
-
     }
-
 }
